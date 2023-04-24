@@ -1,0 +1,450 @@
+package org.apache.jsp;
+
+import javax.servlet.*;
+import javax.servlet.http.*;
+import javax.servlet.jsp.*;
+
+public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
+    implements org.apache.jasper.runtime.JspSourceDependent {
+
+  private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
+
+  private static java.util.List<String> _jspx_dependants;
+
+  private org.glassfish.jsp.api.ResourceInjector _jspx_resourceInjector;
+
+  public java.util.List<String> getDependants() {
+    return _jspx_dependants;
+  }
+
+  public void _jspService(HttpServletRequest request, HttpServletResponse response)
+        throws java.io.IOException, ServletException {
+
+    PageContext pageContext = null;
+    HttpSession session = null;
+    ServletContext application = null;
+    ServletConfig config = null;
+    JspWriter out = null;
+    Object page = this;
+    JspWriter _jspx_out = null;
+    PageContext _jspx_page_context = null;
+
+    try {
+      response.setContentType("text/html");
+      pageContext = _jspxFactory.getPageContext(this, request, response,
+      			null, true, 8192, true);
+      _jspx_page_context = pageContext;
+      application = pageContext.getServletContext();
+      config = pageContext.getServletConfig();
+      session = pageContext.getSession();
+      out = pageContext.getOut();
+      _jspx_out = out;
+      _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
+
+      out.write("<!DOCTYPE html>\n");
+      out.write("\n");
+      out.write("<html lang=\"en\">\n");
+      out.write("    <head>\n");
+      out.write("        <meta charset=\"UTF-8\">\n");
+      out.write("        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n");
+      out.write("        <title>Responsive Covid-19 Website Design Tutorial</title>\n");
+      out.write("\n");
+      out.write("        <!-- font awesome cdn link  -->\n");
+      out.write("        <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css\">\n");
+      out.write("        <link href=\"css/bootstrap.css\" rel=\"stylesheet\" type=\"text/css\"/>\n");
+      out.write("        <!-- custom css file link  -->\n");
+      out.write("        <link rel=\"stylesheet\" href=\"css/style.css\">\n");
+      out.write("        <style>\n");
+      out.write("            .dropbtn {\n");
+      out.write("                color: #666;\n");
+      out.write("                padding: 16px;\n");
+      out.write("                font-size: 16px;\n");
+      out.write("            }\n");
+      out.write("\n");
+      out.write("            .dropdown {\n");
+      out.write("                position: relative;\n");
+      out.write("                display: inline-block;\n");
+      out.write("            }\n");
+      out.write("\n");
+      out.write("            .dropdown-content {\n");
+      out.write("                display: none;\n");
+      out.write("                position: absolute;\n");
+      out.write("                background-color: #f1f1f1;\n");
+      out.write("                min-width: 160px;\n");
+      out.write("                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);\n");
+      out.write("                z-index: 1;\n");
+      out.write("            }\n");
+      out.write("\n");
+      out.write("            .dropdown-content a {\n");
+      out.write("                color: black;\n");
+      out.write("                padding: 12px 16px;\n");
+      out.write("                text-decoration: none;\n");
+      out.write("                display: block;\n");
+      out.write("            }\n");
+      out.write("\n");
+      out.write("            .dropdown-content a:hover {background-color: #ddd;}\n");
+      out.write("\n");
+      out.write("            .dropdown:hover .dropdown-content {display: block;}\n");
+      out.write("\n");
+      out.write("            .dropdown:hover .dropbtn {background-color: #FF4F5B;}\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("        </style>\n");
+      out.write("\n");
+      out.write("    </head>\n");
+      out.write("    <body>\n");
+      out.write("\n");
+      out.write("        <!-- header section starts  -->\n");
+      out.write("\n");
+      out.write("        <header>\n");
+      out.write("\n");
+      out.write("            <a href=\"#\" class=\"logo\">C<span class=\"fas fa-virus\"></span>VID-G<span class=\"fas fa-virus\"></span></a>\n");
+      out.write("\n");
+      out.write("            <div id=\"menu\" class=\"fas fa-bars\"></div>\n");
+      out.write("\n");
+      out.write("            <nav class=\"navbar\">\n");
+      out.write("                <ul>\n");
+      out.write("                    <li><a class=\"active\" href=\"#home\">home</a></li>\n");
+      out.write("                    <li><a href=\"#protect\">protect</a></li>\n");
+      out.write("                    <li><a href=\"#symtoms\">symtoms</a></li>\n");
+      out.write("                    <li><a href=\"#prevent\">prevent</a></li>\n");
+      out.write("                    <li><a href=\"#handwash\">handwash</a></li>\n");
+      out.write("                    <li><a href=\"#spread\">spread</a></li>\n");
+      out.write("                        ");
+
+                            if (request.getSession().getAttribute("phone") != null) {
+                                String phone = request.getSession().getAttribute("phone").toString();
+                                String name = request.getSession().getAttribute("name").toString();
+                                //System.out.println(name + "  " + phone);
+
+                        
+      out.write("\n");
+      out.write("                    <li>\n");
+      out.write("                        <div class=\"dropdown\">\n");
+      out.write("                            <button class=\"dropbtn\">Manage Members</button>\n");
+      out.write("                            <div class=\"dropdown-content\">\n");
+      out.write("                                <a href=\"AddMembers.jsp\">Add_Members</a>\n");
+      out.write("                                <a href=\"ShowMembers.jsp\">Show_Members</a>\n");
+      out.write("                            </div>\n");
+      out.write("                        </div>\n");
+      out.write("                    </li>\n");
+      out.write("                    <li>\n");
+      out.write("                        <div class=\"dropdown\">\n");
+      out.write("                            <button class=\"dropbtn\">HII ");
+      out.print(name);
+      out.write("</button>\n");
+      out.write("                            <div class=\"dropdown-content\">\n");
+      out.write("                                <a href=\"ChangePassword.jsp\">Change_Password</a>\n");
+      out.write("                                <a href=\"./UserLogoutResponse\">Logout</a>\n");
+      out.write("                            </div>\n");
+      out.write("                        </div>\n");
+      out.write("                    </li>\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("                    ");
+                    } else {
+                    
+      out.write("\n");
+      out.write("                    <li> <a href = \"LoginUser.jsp\" > Login </a> </li>\n");
+      out.write("                    <li> <a href = \"SignupUser.jsp\" > Signup </a> </li>\n");
+      out.write("                        ");
+
+                            }
+                        
+      out.write("\n");
+      out.write("                </ul>\n");
+      out.write("            </nav>\n");
+      out.write("\n");
+      out.write("        </header>\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("        <section class=\"home\" id=\"home\">\n");
+      out.write("\n");
+      out.write("            <div class=\"content\">\n");
+      out.write("\n");
+      out.write("                <h3 style=\"color: #FF4F5B\">Stay Safe, Stay Home</h3>\n");
+      out.write("                <p style=\"text-align: justify\">Stay-at-home directives are issued to protect you, your family, and the public at large. Do your part by staying home. Now is not the time for a play date for kids, not the time for a dinner for adults, and not the time for a personal visit to the elderly. Spring break plans should be cancelled, birthday parties should be postponed, extended family dinners should be suspended. If the NBA can cancel their basketball games, you can cancel your in-person social calendar. Please, stay home.</p>\n");
+      out.write("\n");
+      out.write("            </div>\n");
+      out.write("\n");
+      out.write("            <div class=\"image\">\n");
+      out.write("                <img src=\"images/home-img.png\" alt=\"\">\n");
+      out.write("            </div>\n");
+      out.write("\n");
+      out.write("        </section>\n");
+      out.write("\n");
+      out.write("        <!-- home section ends -->\n");
+      out.write("\n");
+      out.write("        <section class=\"protect\" id=\"protect\">\n");
+      out.write("\n");
+      out.write("            <h1 class=\"heading\">Take steps to <span>protect</span> yourself</h1>\n");
+      out.write("\n");
+      out.write("            <div class=\"box-container\">\n");
+      out.write("\n");
+      out.write("                <div class=\"box\">\n");
+      out.write("                    <img src=\"images/protect-1.png\" alt=\"\">\n");
+      out.write("                    <h3>Wear A Face Mask</h3>\n");
+      out.write("                    <p style=\"text-align: center\">Masks, or facial coverings, are mainly to prevent the person wearing the mask from generating droplets from breathing, coughing, sneezing, etc.  It is these droplets that can carry a virus from one person to another.</p>\n");
+      out.write("                </div>\n");
+      out.write("\n");
+      out.write("                <div class=\"box\">\n");
+      out.write("                    <img src=\"images/protect-2.png\" alt=\"\">\n");
+      out.write("                    <h3>Wash Your Hands</h3>\n");
+      out.write("                    <p style=\"text-align: center\">You can help yourself and your loved ones stay healthy by washing your hands often, especially during these key times when you are likely to get and spread germ. Example - After blowing your nose or coughing !!</p>\n");
+      out.write("                </div>\n");
+      out.write("\n");
+      out.write("                <div class=\"box\">\n");
+      out.write("                    <img src=\"images/protect-3.png\" alt=\"\">\n");
+      out.write("                    <h3>Avoid Close Contact</h3>\n");
+      out.write("                    <p style=\"text-align: \"> Social distancing aims to decrease transmission of COVID-19 in a folks by minimizing contact between infected and healthy individuals . Strictly avoid contact with someone who has symptoms of the infection.!</p>\n");
+      out.write("                </div>\n");
+      out.write("\n");
+      out.write("            </div>\n");
+      out.write("\n");
+      out.write("        </section>\n");
+      out.write("\n");
+      out.write("        <!-- symtoms section starts  -->\n");
+      out.write("\n");
+      out.write("        <section class=\"symtoms\" id=\"symtoms\">\n");
+      out.write("\n");
+      out.write("            <div class=\"content\">\n");
+      out.write("                <h1 class=\"heading\">What Are The Main <span>Symptoms?</span></h1><br><br>\n");
+      out.write("                <ul>\n");
+      out.write("                    <div class=\"one\">\n");
+      out.write("                        <li>fever</li>\n");
+      out.write("                        <li>Tiredness</li>\n");
+      out.write("                        <li>Dry Cough</li>\n");
+      out.write("                    </div>\n");
+      out.write("                    <div class=\"two\">\n");
+      out.write("                        <li>Sore Throat</li>            \n");
+      out.write("                        <li>Aches and Pains</li>\n");
+      out.write("                        <li>Shortness of Breath</li>\n");
+      out.write("                    </div>\n");
+      out.write("                </ul>\n");
+      out.write("                <a href=\"https://www.who.int/emergencies/diseases/novel-coronavirus-2019/question-and-answers-hub/q-a-detail/coronavirus-disease-covid-19\" class=\"btn\">know more</a>\n");
+      out.write("            </div>\n");
+      out.write("\n");
+      out.write("            <div class=\"image\">\n");
+      out.write("                <img src=\"images/symptoms-img.png\" alt=\"\">\n");
+      out.write("            </div>\n");
+      out.write("\n");
+      out.write("        </section>\n");
+      out.write("\n");
+      out.write("        <!-- symtoms section ends -->\n");
+      out.write("\n");
+      out.write("        <!-- prevent section starts  -->\n");
+      out.write("\n");
+      out.write("        <section class=\"prevent\" id=\"prevent\">\n");
+      out.write("\n");
+      out.write("            <div class=\"row\">\n");
+      out.write("\n");
+      out.write("                <div class=\"image\">\n");
+      out.write("                    <img src=\"images/dont-img.png\" alt=\"\">\n");
+      out.write("                </div>\n");
+      out.write("\n");
+      out.write("                <div class=\"content\">\n");
+      out.write("                    <h1 class=\"heading\">Things <span>not to do</span> during covid</h1><br>\n");
+      out.write("                    <ul>\n");
+      out.write("                        <li>Do Not Share Eating</li>\n");
+      out.write("                        <li>Do Not Touch Your Face or Nose</li>\n");
+      out.write("                        <li>Do Not Contact Sick People</li>\n");
+      out.write("                    </ul>\n");
+      out.write("                </div>\n");
+      out.write("\n");
+      out.write("            </div>\n");
+      out.write("\n");
+      out.write("            <div class=\"row\">\n");
+      out.write("\n");
+      out.write("                <div class=\"content\">\n");
+      out.write("                    <h1 class=\"heading\">Things <span>to do</span> during covid</h1><br>\n");
+      out.write("                    <ul>\n");
+      out.write("                        <li>Wash Your Hands For 20 sec</li>\n");
+      out.write("                        <li>Wear a Mask if Available</li>\n");
+      out.write("                        <li>Seek Medical Care Regularly</li>\n");
+      out.write("                    </ul>\n");
+      out.write("                </div>\n");
+      out.write("\n");
+      out.write("                <div class=\"image\">\n");
+      out.write("                    <img src=\"images/do-img.png\" alt=\"\">\n");
+      out.write("                </div>\n");
+      out.write("\n");
+      out.write("            </div>\n");
+      out.write("\n");
+      out.write("        </section>\n");
+      out.write("\n");
+      out.write("        <!-- prevent section ends -->\n");
+      out.write("\n");
+      out.write("        <!-- handwash section starts  -->\n");
+      out.write("\n");
+      out.write("        <section class=\"handwash\" id=\"handwash\">\n");
+      out.write("\n");
+      out.write("            <h1 class=\"heading\">how to <span>wash you hand</span> properly</h1>\n");
+      out.write("\n");
+      out.write("            <div class=\"box-container\">\n");
+      out.write("\n");
+      out.write("                <div class=\"box\">\n");
+      out.write("                    <span>1</span>\n");
+      out.write("                    <img src=\"images/hadnwash-1.png\" alt=\"\">\n");
+      out.write("                    <h3>Apply Soap on Hand</h3>\n");
+      out.write("                </div>\n");
+      out.write("\n");
+      out.write("                <div class=\"box\">\n");
+      out.write("                    <span>2</span>\n");
+      out.write("                    <img src=\"images/hadnwash-2.png\" alt=\"\">\n");
+      out.write("                    <h3>Palm to Palm</h3>\n");
+      out.write("                </div>\n");
+      out.write("\n");
+      out.write("                <div class=\"box\">\n");
+      out.write("                    <span>3</span>\n");
+      out.write("                    <img src=\"images/hadnwash-3.png\" alt=\"\">\n");
+      out.write("                    <h3>Between Fingers</h3>\n");
+      out.write("                </div>\n");
+      out.write("\n");
+      out.write("                <div class=\"box\">\n");
+      out.write("                    <span>4</span>\n");
+      out.write("                    <img src=\"images/hadnwash-4.png\" alt=\"\">\n");
+      out.write("                    <h3>Back of The Hands</h3>\n");
+      out.write("                </div>\n");
+      out.write("\n");
+      out.write("                <div class=\"box\">\n");
+      out.write("                    <span>5</span>\n");
+      out.write("                    <img src=\"images/hadnwash-5.png\" alt=\"\">\n");
+      out.write("                    <h3>clean with water</h3>\n");
+      out.write("                </div>\n");
+      out.write("\n");
+      out.write("                <div class=\"box\">\n");
+      out.write("                    <span>6</span>\n");
+      out.write("                    <img src=\"images/hadnwash-6.png\" alt=\"\">\n");
+      out.write("                    <h3>Use Towel to Dry</h3>\n");
+      out.write("                </div>\n");
+      out.write("\n");
+      out.write("            </div>\n");
+      out.write("\n");
+      out.write("        </section>\n");
+      out.write("\n");
+      out.write("        <!-- handwash section ends -->\n");
+      out.write("\n");
+      out.write("        <!-- spread section starts  -->\n");
+      out.write("\n");
+      out.write("        <section class=\"spread\" id=\"spread\">\n");
+      out.write("\n");
+      out.write("            <h1 class=\"heading\">how Covid-19 <span>spreads</span> over the world</h1>\n");
+      out.write("\n");
+      out.write("            <div class=\"image\"></div>\n");
+      out.write("\n");
+      out.write("        </section>\n");
+      out.write("\n");
+      out.write("        <!-- spread section ends -->\n");
+      out.write("\n");
+      out.write("        <!-- footer section starts  -->\n");
+      out.write("\n");
+      out.write("        <section class=\"footer\">\n");
+      out.write("\n");
+      out.write("            <div class=\"box-container\">\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("              \n");
+      out.write("\n");
+      out.write("                    <div class=\"box \">\n");
+      out.write("                        <h3>about us</h3>\n");
+      out.write("                        <p> An Initiative to make India Corona free .</p>\n");
+      out.write("                          <div class=\"share\">\n");
+      out.write("                            <a href=\"#\" class=\"fab fa-youtube\"></a>\n");
+      out.write("                            <a href=\"#\" class=\"fab fa-facebook-f\"></a>\n");
+      out.write("                            <a href=\"#\" class=\"fab fa-twitter\"></a>\n");
+      out.write("                            <a href=\"#\" class=\"fab fa-instagram\"></a>\n");
+      out.write("                        </div>\n");
+      out.write("                    </div>\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("                    ");
+
+                        if (request.getSession().getAttribute("phone") == null) {
+                    
+      out.write("\n");
+      out.write("                    <div class=\"box  \">\n");
+      out.write("                        <h3>quick links</h3>\n");
+      out.write("                        <a href=\"LoginStaff.jsp\">Staff Login</a>\n");
+      out.write("                        <a href=\"LoginAdmin.jsp\">Admin Login</a>\n");
+      out.write("                        <a href=\"LoginCenter.jsp\">Vaccine Center Login</a>\n");
+      out.write("                    </div>\n");
+      out.write("                    ");
+
+                    } else {
+                    
+      out.write("\n");
+      out.write("\n");
+      out.write("                    ");
+
+                        }
+                    
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("                    <div class=\"box \" style=\"ma\">\n");
+      out.write("                        <h3>contact info</h3>\n");
+      out.write("                         <p> <i class=\"fas fa-phone\"></i> +91-8196923102,+91-7814007727 </p>\n");
+      out.write("                        <p> <i class=\"fas fa-envelope\"></i> jashanpreetkaur379@gmail.com , mr.vasu.madaan@gmail.com </p>\n");
+      out.write("                        <p> <i class=\"fas fa-map-marker-alt\"></i> Amritsar, India - 143001. </p>\n");
+      out.write("                      \n");
+      out.write("                    </div>\n");
+      out.write("\n");
+      out.write("                </div>\n");
+      out.write("                    </div>\n");
+      out.write("                <br>\n");
+      out.write("\n");
+      out.write("                <h1 class=\"credit\"> created by <a href=\"#\">Ms. Jashanpreet Kaur And Mr. Vasu Madaan</a> all rights reserved! </h1>\n");
+      out.write("\n");
+      out.write("        </section>\n");
+      out.write("\n");
+      out.write("        <!-- footer section ends -->\n");
+      out.write("\n");
+      out.write("        <!-- scroll top  -->\n");
+      out.write("\n");
+      out.write("        <a href=\"#home\" class=\"scroll-top\">\n");
+      out.write("            <img src=\"images/scroll-img.png\" alt=\"\">\n");
+      out.write("        </a>\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("        <!-- jquery cdn link  -->\n");
+      out.write("        <script src=\"https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js\"></script>\n");
+      out.write("\n");
+      out.write("        <!-- custom js file link  -->\n");
+      out.write("        <script src=\"js/script.js\"></script>\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("    </body>\n");
+      out.write("</html>");
+    } catch (Throwable t) {
+      if (!(t instanceof SkipPageException)){
+        out = _jspx_out;
+        if (out != null && out.getBufferSize() != 0)
+          out.clearBuffer();
+        if (_jspx_page_context != null) _jspx_page_context.handlePageException(t);
+        else throw new ServletException(t);
+      }
+    } finally {
+      _jspxFactory.releasePageContext(_jspx_page_context);
+    }
+  }
+}
